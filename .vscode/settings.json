@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.vscode": true,
+    "**/.firebase": true,
+    "**/.angular": true
+  },
+  "cSpell.words": ["titlecase", "uids"],
+  "angular.enable-strict-mode-prompt": false
+}

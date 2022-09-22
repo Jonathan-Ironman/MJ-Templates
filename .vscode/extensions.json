@@ -1,4 +1,81 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    // Name: Angular Language Service
+    // Id: Angular.ng-template
+    // Description: Editor services for Angular templates
+    // Version: 14.1.0
+    // Publisher: Angular
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=Angular.ng-template
+    "Angular.ng-template",
+
+    // Name: Firebase
+    // Id: toba.vsfire
+    // Description: Firestore Security Rules syntax highlighting
+    // Version: 1.4.1
+    // Publisher: toba
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=toba.vsfire
+    "toba.vsfire",
+
+    // Name: Firebase Explorer
+    // Id: jsayol.firebase-explorer
+    // Description: Visual Studio Code extension to explore and manage your Firebase projects
+    // Version: 0.3.3
+    // Publisher: jsayol
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=jsayol.firebase-explorer
+    "jsayol.firebase-explorer",
+
+    // Name: Code Spell Checker
+    // Id: streetsidesoftware.code-spell-checker
+    // Description: Spelling checker for source code
+    // Version: 2.3.1
+    // Publisher: Street Side Software
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+    "streetsidesoftware.code-spell-checker",
+
+    // Name: GitHub Pull Requests and Issues
+    // Id: GitHub.vscode-pull-request-github
+    // Description: Pull Request and Issue Provider for GitHub
+    // Version: 0.46.0
+    // Publisher: GitHub
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github
+    "GitHub.vscode-pull-request-github",
+
+    // Name: Prettier - Code formatter
+    // Id: esbenp.prettier-vscode
+    // Description: Code formatter using prettier
+    // Version: 9.5.0
+    // Publisher: Prettier
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+    "esbenp.prettier-vscode",
+
+    // Name: Todo Tree
+    // Id: Gruntfuggly.todo-tree
+    // Description: Show TODO, FIXME, etc. comment tags in a tree view
+    // Version: 0.0.215
+    // Publisher: Gruntfuggly
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
+    "Gruntfuggly.todo-tree",
+
+    // Name: ESLint
+    // Id: dbaeumer.vscode-eslint
+    // Description: Integrates ESLint JavaScript into VS Code.
+    // Version: 2.2.6
+    // Publisher: Microsoft
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+    "dbaeumer.vscode-eslint",
+
+    // Name: GitLens — Git supercharged
+    // Id: eamodio.gitlens
+    // Description: Supercharge Git within VS Code — Visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more
+    // Version: 12.1.2
+    // Publisher: GitKraken
+    // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+    "eamodio.gitlens"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": ["DotJoshJohnson.xml"]
 }
