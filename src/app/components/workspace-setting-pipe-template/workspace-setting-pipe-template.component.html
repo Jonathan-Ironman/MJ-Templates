@@ -1,6 +1,14 @@
 <mat-card>
     <mat-card-title>Single workspace setting pipe template</mat-card-title>
     <mat-card-content>
-        /imagine <input mat-input type="text" [formControl]="input" />
+        <mat-form-field>
+            /imagine <input mat-input type="text" [formControl]="input" />
+        </mat-form-field>
+        <mat-form-field>
+            Template <input mat-input type="text" [formControl]="template" />
+        </mat-form-field>
+        <p>
+            Result: <span>{{ output }}</span>
+        </p>
     </mat-card-content>
 </mat-card>

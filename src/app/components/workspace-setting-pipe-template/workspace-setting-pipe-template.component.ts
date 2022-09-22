@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 export class WorkspaceSettingPipeTemplateComponent implements OnInit {
   input = new FormControl('');
   template = new FormControl('_ by _');
+  output = '';
 
   ngOnInit(): void {}
 }
