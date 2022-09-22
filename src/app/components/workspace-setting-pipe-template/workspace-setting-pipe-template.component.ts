@@ -8,6 +8,8 @@ import { combineLatest, map, Observable, startWith } from 'rxjs';
   styleUrls: ['./workspace-setting-pipe-template.component.scss'],
 })
 export class WorkspaceSettingPipeTemplateComponent implements OnInit {
+  title = 'Single workspace setting pipe template';
+
   defaultInput = 'prefix, |vase|escher| postfix';
   defaultTemplate = '_ by _';
 
