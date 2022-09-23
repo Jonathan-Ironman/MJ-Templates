@@ -10,8 +10,8 @@ import { combineLatest, map, Observable, startWith } from 'rxjs';
 export class WorkspaceSettingPipeTemplateComponent implements OnInit {
   title = 'Single workspace setting pipe template';
 
-  defaultInput = 'prefix, |vase|escher| postfix';
-  defaultTemplate = '_ by _';
+  defaultInput = '|vase|escher|2:3|3|';
+  defaultTemplate = '_ by _ --ar _ --v _';
 
   templateVarsRegex = /\|(.*)\|/;
   templateVarsSplitChar = '|';

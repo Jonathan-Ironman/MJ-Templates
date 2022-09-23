@@ -9,7 +9,7 @@ import { combineLatest, debounceTime, map, Observable, startWith } from 'rxjs';
 })
 export class BackendNamedTemplatesComponent implements OnInit {
   title = 'Named backend templates';
-  defaultInput = 'prefix, |darkside| --t cookies';
+  defaultInput = '|darkside| --t cookies';
 
   namedTemplates = [
     {
