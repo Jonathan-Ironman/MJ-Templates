@@ -10,9 +10,9 @@ import { combineLatest, map, Observable, startWith } from 'rxjs';
 export class ParamTemplateComponent implements OnInit {
   title = 'Param based templates';
   defaultInput =
-    'Dutch still of |vase|giger|blue|. Product photography --ar 2:3 --template _ by _ with _ decorations';
+    'Dutch still of |vase|giger|blue|. Product photography --ar 2:3 --template _ by _ with _ decorations --no text';
 
-  templateRegex = /--template\s+(.+)(?=\s--)/;
+  templateRegex = /--template\s+(.*?)(?=\s--|$)/;
   templateVarsRegex = /\|(.*)\|/;
   templateVarsSplitChar = '|';
   templateVarPlaceholder = '_';
@@ -59,7 +59,7 @@ export class ParamTemplateComponent implements OnInit {
           template
         );
 
-        // Remove --t and template name from input.
+        // Remove param and template from input.
         input = input.replace(this.templateRegex, '');
 
         // Replace the template variables with the filled template.
