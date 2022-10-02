@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>{{ title }}</mat-card-title>
+    <mat-card-content>
+        <form>
+            <mat-form-field appearance="outline">
+                <mat-label>/imagine</mat-label>
+                <input autocomplete="off" matInput type="text" [formControl]="input" />
+            </mat-form-field>
+
+        </form>
+        <p class="result">
+            Result: <span>{{ output$ | async }}</span>
+        </p>
+
+        <mat-divider></mat-divider>
+
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <span>Reasoning, pros and cons</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>
+                    {{ reasoning }}
+                </p>
+                <mat-list>
+                    <div mat-subheader>Pros</div>
+                    <mat-list-item *ngFor="let pro of pros">
+                        <mat-icon mat-list-icon>add_circle_outline</mat-icon>
+                        <div mat-line>{{pro}}</div>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <div mat-subheader>Cons</div>
+                    <mat-list-item *ngFor="let con of cons">
+                        <mat-icon mat-list-icon>remove_circle_outline</mat-icon>
+                        <div mat-line>{{con}}</div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+    </mat-card-content>
+</mat-card>

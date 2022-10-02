@@ -6,11 +6,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
 import { AppComponent } from './app.component';
-import { WorkspaceSettingPipeTemplateComponent } from './components/workspace-setting-pipe-template/workspace-setting-pipe-template.component';
 import { BackendNamedTemplatesComponent } from './components/backend-named-templates/backend-named-templates.component';
+import { ParamTemplateComponent } from './components/param-template/param-template.component';
+import { WorkspaceSettingPipeTemplateComponent } from './components/workspace-setting-pipe-template/workspace-setting-pipe-template.component';
 
 @NgModule({
-  declarations: [AppComponent, WorkspaceSettingPipeTemplateComponent, BackendNamedTemplatesComponent],
+  declarations: [
+    AppComponent,
+    WorkspaceSettingPipeTemplateComponent,
+    BackendNamedTemplatesComponent,
+    ParamTemplateComponent,
+  ],
   imports: [
     AppMaterialModule,
     BrowserAnimationsModule,
