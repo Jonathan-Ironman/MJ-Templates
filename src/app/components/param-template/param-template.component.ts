@@ -12,7 +12,7 @@ export class ParamTemplateComponent implements OnInit {
   defaultInput =
     'Dutch still of |vase|giger|blue|. Product photography --ar 2:3 --template _ by _ with _ decorations';
 
-  templateRegex = /--template\s+(.+)(?=\s+--|$)/;
+  templateRegex = /--template\s+(.+)(?=\s--)/;
   templateVarsRegex = /\|(.*)\|/;
   templateVarsSplitChar = '|';
   templateVarPlaceholder = '_';
