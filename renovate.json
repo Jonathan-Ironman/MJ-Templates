@@ -1,0 +1,59 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices", ":semanticCommitTypeAll(chore)"],
+  "timezone": "Europe/Amsterdam",
+  "schedule": ["before 6am on monday"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 3,
+  "dependencyDashboard": true,
+  "rangeStrategy": "bump",
+  "labels": ["dependencies", "renovate"],
+  "minimumReleaseAge": "14 days",
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "description": "Never automerge pre-1.0.0 packages (unstable semver)",
+      "matchCurrentVersion": "<1.0.0",
+      "automerge": false
+    },
+    {
+      "description": "Automerge patch+minor for all stable deps",
+      "matchUpdateTypes": ["patch", "minor"],
+      "matchCurrentVersion": ">=1.0.0",
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Angular major updates - PR only, no automerge (requires ng update)",
+      "matchPackageNames": ["/^@angular/", "/^@angular-devkit/", "/^@angular-eslint/", "/^@ngrx/"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "addLabels": ["angular-major", "manual-migration"]
+    },
+    {
+      "description": "zone.js major tied to Angular version",
+      "matchPackageNames": ["zone.js"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "addLabels": ["angular-major"]
+    },
+    {
+      "description": "All major updates require manual review",
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "addLabels": ["major-update"]
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["before 6am on monday"]
+  },
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["at any time"],
+    "addLabels": ["security"]
+  },
+  "osvVulnerabilityAlerts": true
+}
