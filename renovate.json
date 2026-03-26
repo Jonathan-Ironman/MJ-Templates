@@ -1,13 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", ":semanticCommitTypeAll(chore)"],
+  "extends": [
+    "config:best-practices",
+    ":semanticCommitTypeAll(chore)"
+  ],
   "timezone": "Europe/Amsterdam",
-  "schedule": ["before 6am on monday"],
-  "prConcurrentLimit": 5,
-  "prHourlyLimit": 3,
+  "schedule": [
+    "before 6am on monday"
+  ],
+  "prConcurrentLimit": 2,
+  "prHourlyLimit": 2,
   "dependencyDashboard": true,
   "rangeStrategy": "bump",
-  "labels": ["dependencies", "renovate"],
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
   "minimumReleaseAge": "14 days",
   "platformAutomerge": true,
   "packageRules": [
@@ -18,42 +26,71 @@
     },
     {
       "description": "Automerge patch+minor for all stable deps",
-      "matchUpdateTypes": ["patch", "minor"],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
       "matchCurrentVersion": ">=1.0.0",
       "automerge": true,
-      "automergeType": "pr"
+      "automergeType": "branch"
     },
     {
       "description": "Angular major updates - PR only, no automerge (requires ng update)",
-      "matchPackageNames": ["/^@angular/", "/^@angular-devkit/", "/^@angular-eslint/", "/^@ngrx/"],
-      "matchUpdateTypes": ["major"],
+      "matchPackageNames": [
+        "/^@angular/",
+        "/^@angular-devkit/",
+        "/^@angular-eslint/",
+        "/^@ngrx/"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "automerge": false,
-      "addLabels": ["angular-major", "manual-migration"]
+      "addLabels": [
+        "angular-major",
+        "manual-migration"
+      ]
     },
     {
       "description": "zone.js major tied to Angular version",
-      "matchPackageNames": ["zone.js"],
-      "matchUpdateTypes": ["major"],
+      "matchPackageNames": [
+        "zone.js"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "automerge": false,
-      "addLabels": ["angular-major"]
+      "addLabels": [
+        "angular-major"
+      ]
     },
     {
       "description": "All major updates require manual review",
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "automerge": false,
-      "addLabels": ["major-update"]
+      "addLabels": [
+        "major-update"
+      ]
     }
   ],
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
-    "schedule": ["before 6am on monday"]
+    "schedule": [
+      "before 6am on monday"
+    ]
   },
   "vulnerabilityAlerts": {
     "enabled": true,
     "automerge": true,
-    "schedule": ["at any time"],
-    "addLabels": ["security"]
+    "schedule": [
+      "at any time"
+    ],
+    "addLabels": [
+      "security"
+    ]
   },
   "osvVulnerabilityAlerts": true
 }
