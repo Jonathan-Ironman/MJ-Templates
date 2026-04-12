@@ -35,6 +35,15 @@
       "automergeType": "branch"
     },
     {
+      "description": "Automerge pin and digest updates (safe, no version change)",
+      "matchUpdateTypes": [
+        "pin",
+        "digest"
+      ],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
       "description": "Angular major updates - PR only, no automerge (requires ng update)",
       "matchPackageNames": [
         "/^@angular/",
