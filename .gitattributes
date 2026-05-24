@@ -1,0 +1,28 @@
+# Auto-detect text files and normalize to LF on commit
+* text=auto eol=lf
+
+# Windows-specific scripts: keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Shell scripts: enforce LF regardless of OS
+*.sh text eol=lf
+
+# Binary files — no conversion
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.zip binary
+*.mp3 binary
+*.mp4 binary
+*.wav binary
+*.ogg binary
