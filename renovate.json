@@ -1,1 +1,4 @@
-{"$schema":"https://docs.renovatebot.com/renovate-schema.json","extends":["local\u003eJonathan-Ironman/.github:renovate-config"]}
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["local>Jonathan-Ironman/.github:renovate-config"]
+}
